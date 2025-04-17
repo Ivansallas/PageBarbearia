@@ -5,53 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Contatos - Barbearia Luiz</title>
 </head>
 <body>
     <header>
         <div class="caixa">
-            <h1><img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo"/>
+            <h1><img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo" /></h1>
             <nav>
-                <ul>
+                <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="contato.html">Contatos</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
-
                 </ul>
+                <div class="menu-mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
     <main>
-        <form action="processar-formulario.php">
+        <form id="formulario-contato" action="processar-formulario.php" onsubmit="return validarFormulario()">
             <h2 class="titulo">Contato da Barbearia Luiz</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="input-padrao" required>
+            <div class="form-grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="input-padrao" required>
+                <span class="erro-mensagem" id="erro-nome"></span>
+                </div>
 
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" class="input-padrao" required>
+            <div class="form-grupo">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" class="input-padrao" required>
+                <span class="erro-mensagem" id="erro-sobrenome"></span>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email" class="input-padrao" required>
+            <div class="form-grupo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" class="input-padrao" required>
+                <span class="erro-mensagem" id="erro-email"></span>
+                </div>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" class="input-padrao" required>
+            <div class="form-grupo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" class="input-padrao" required>
+                <span class="erro-mensagem" id="erro-telefone"></span>
+                </div>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-padrao" required></textarea>
+            <div class="form-grupo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-padrao"
+                    required></textarea>
+                <span class="erro-mensagem" id="erro-mensagem"></span>
+                </div>
             
             <div class="contato">
                 <p>Qual a forma de contato?</p>
-                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>                
-                
-                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>               
-                
-                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">WhatsApp</label>
-                
+                <div class="radio-grupo">
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">WhatsApp</label>
+                </div>
             </div>
             <div class="horario">
                 <p>Qual horário prefere ser atendido?</p>
-                <select name="horario" id="horario">
+                <select name="horario" id="horario" class="input-padrao">
                     <option value="manha">Manhã</option>
                     <option value="tarde">Tarde</option>
                     <option value="noite">Noite</option>
@@ -61,13 +82,114 @@
 
             <button type="submit" class="enviar">Enviar Formulário</button>
         </form>
+        <section class="redes-sociais">
+            <h2 class="titulo">Siga-nos nas Redes Sociais</h2>
+            <div class="redes-container">
+                <a href="https://facebook.com" target="_blank" class="rede-social">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="rede-social">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="rede-social">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="rede-social">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </section>
+        
+        <section class="mapa-contato">
+            <h2 class="titulo">Nossa Localização</h2>
+            <div class="mapa-conteudo">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </section>
     </main>
-   <footer>
-    <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
+    <button id="voltar-topo" title="Voltar ao topo">↑</button>
+    <footer>
+        <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
         <div class="copyright">
             <p>Barbearia do Luiz - Todos os direitos reservados</p>
             <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - Cidade: São Paulo - SP</p>
         </div>    
-  </footer>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function validarFormulario() {
+            let valido = true;
+
+            // Validar nome
+            const nome = document.getElementById('nome').value;
+            if (nome.length < 3) {
+                document.getElementById('erro-nome').textContent = 'O nome deve ter pelo menos 3 caracteres';
+                valido = false;
+            } else {
+                document.getElementById('erro-nome').textContent = '';
+            }
+
+            // Validar sobrenome
+            const sobrenome = document.getElementById('sobrenome').value;
+            if (sobrenome.length < 3) {
+                document.getElementById('erro-sobrenome').textContent = 'O sobrenome deve ter pelo menos 3 caracteres';
+                valido = false;
+            } else {
+                document.getElementById('erro-sobrenome').textContent = '';
+            }
+
+            // Validar email
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('erro-email').textContent = 'Digite um email válido';
+                valido = false;
+            } else {
+                document.getElementById('erro-email').textContent = '';
+            }
+
+            // Validar telefone
+            const telefone = document.getElementById('telefone').value;
+            const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+            if (!telefoneRegex.test(telefone)) {
+                document.getElementById('erro-telefone').textContent = 'Digite um telefone válido (ex: (11) 99999-9999)';
+                valido = false;
+            } else {
+                document.getElementById('erro-telefone').textContent = '';
+            }
+
+            // Validar mensagem
+            const mensagem = document.getElementById('mensagem').value;
+            if (mensagem.length < 10) {
+                document.getElementById('erro-mensagem').textContent = 'A mensagem deve ter pelo menos 10 caracteres';
+                valido = false;
+            } else {
+                document.getElementById('erro-mensagem').textContent = '';
+            }
+
+            return valido;
+        }
+
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let valor = e.target.value.replace(/\D/g, '');
+            if (valor.length > 11) valor = valor.slice(0, 11);
+
+            if (valor.length > 2) {
+                valor = '(' + valor.slice(0, 2) + ') ' + valor.slice(2);
+            }
+            if (valor.length > 9) {
+                valor = valor.slice(0, 9) + '-' + valor.slice(9);
+            }
+
+            e.target.value = valor;
+        });
+    </script>
 </body>
 </html>
