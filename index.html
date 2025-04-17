@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
   <title>Home - Barbearia do Luiz</title>
 </head>
 <body>
   <header>
     <div class="caixa">
       <h1>
-        <img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo"/>
+        <img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo" />
       </h1>
       <nav>
-        <ul>
+        <ul class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="agenda.html">Agenda</a></li>
-          <li><a href="agenda.html">Agenda</a></li>
-
         </ul>
+        <div class="menu-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </div>
   </header>
@@ -78,9 +82,31 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
+  <section class="depoimentos">
+    <h2 class="titulo">O que nossos clientes dizem</h2>
+    <div class="depoimentos-container">
+      <div class="depoimento">
+        <p>"Melhor barbearia da cidade! Atendimento excelente e profissionais muito qualificados."</p>
+        <span class="cliente">- João Silva</span>
+      </div>
+      <div class="depoimento">
+        <p>"Sempre saio satisfeito com o serviço. Ambiente agradável e preços justos."</p>
+        <span class="cliente">- Pedro Santos</span>
+      </div>
+      <div class="depoimento">
+        <p>"Já sou cliente há mais de 2 anos e nunca me decepcionei. Recomendo!"</p>
+        <span class="cliente">- Carlos Oliveira</span>
+      </div>
+    </div>
+  </section>
+  
+  <div class="agendar-container">
+    <a href="agenda.html" class="botao-agendar">Agendar Horário</a>
+  </div>
+
   </main>
 
-  
+  <button id="voltar-topo" title="Voltar ao topo">↑</button>
 
   <footer>
     <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
@@ -89,5 +115,6 @@
       <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - São Paulo - SP</p>
     </div>
   </footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Agenda da Barbearia</title>
 </head>
 <body>
@@ -14,34 +15,152 @@
         <img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo"/>
       </h1>
       <nav>
-        <ul>
+        <ul class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="agenda.html">Agenda</a></li>
-
         </ul>
+        <div class="menu-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </div>
   </header>
   <main class="conteudo-principal">
     <h1>Agenda | Barbearia do Luiz</h1>
-    <p>Confira os horário disponíveis</p>
-    <section class="agenda">
-        <ul>
+    <p>Confira os horários disponíveis e agende seu horário</p>
+    
+    <section class="horarios-funcionamento">
+      <h2 class="titulo">Horário de Funcionamento</h2>
+      <ul class="agenda">
         <li>Segunda - 08:00 às 18:00</li>
         <li>Terça - 08:00 às 18:00</li>
         <li>Quarta - 08:00 às 18:00</li>
         <li>Quinta - 08:00 às 18:00</li>
         <li>Sexta - 08:00 às 18:00</li>
-        <li>Sabado - 08:00 às 12:00</li>
-        </ul>   
-
+        <li>Sábado - 08:00 às 12:00</li>
+        </ul>
     </section>
     
-
-
+    <section class="agendamento-online">
+      <h2 class="titulo">Agende seu Horário</h2>
+      <form class="form-agendamento">
+        <div class="form-grupo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" class="input-padrao" required>
+        </div>
+    
+        <div class="form-grupo">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" class="input-padrao" required>
+        </div>
+    
+        <div class="form-grupo">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" class="input-padrao" required>
+        </div>
+    
+        <div class="form-grupo">
+          <label for="data">Data:</label>
+          <input type="date" id="data" name="data" class="input-padrao" required>
+        </div>
+    
+        <div class="form-grupo">
+          <label for="horario">Horário:</label>
+          <select id="horario" name="horario" class="input-padrao" required>
+            <option value="">Selecione um horário</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+          </select>
+        </div>
+    
+        <div class="form-grupo">
+          <label for="servico">Serviço:</label>
+          <select id="servico" name="servico" class="input-padrao" required>
+            <option value="">Selecione um serviço</option>
+            <option value="cabelo">Corte de Cabelo - R$ 40,00</option>
+            <option value="barba">Corte de Barba - R$ 35,00</option>
+            <option value="cabelo+barba">Cabelo + Barba - R$ 70,00</option>
+          </select>
+        </div>
+        <div class="form-grupo">
+          <label for="observacoes">Observações:</label>
+          <textarea id="observacoes" name="observacoes" class="input-padrao" rows="4"></textarea>
+        </div>
+        
+        <button type="submit" class="enviar">Agendar Horário</button>
+        </form>
+        </section>
+    
+    <section class="calendario">
+      <h2 class="titulo">Calendário de Disponibilidade</h2>
+      <div class="calendario-container">
+        <div class="mes">
+          <h3>Maio 2024</h3>
+          <div class="dias-semana">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+          </div>
+          <div class="dias">
+            <div class="dia vazio"></div>
+            <div class="dia disponivel">1</div>
+            <div class="dia disponivel">2</div>
+            <div class="dia disponivel">3</div>
+            <div class="dia disponivel">4</div>
+            <div class="dia disponivel">5</div>
+            <div class="dia disponivel">6</div>
+            <div class="dia disponivel">7</div>
+            <div class="dia disponivel">8</div>
+            <div class="dia disponivel">9</div>
+            <div class="dia disponivel">10</div>
+            <div class="dia disponivel">11</div>
+            <div class="dia disponivel">12</div>
+            <div class="dia disponivel">13</div>
+            <div class="dia disponivel">14</div>
+            <div class="dia disponivel">15</div>
+            <div class="dia disponivel">16</div>
+            <div class="dia disponivel">17</div>
+            <div class="dia disponivel">18</div>
+            <div class="dia disponivel">19</div>
+            <div class="dia disponivel">20</div>
+            <div class="dia disponivel">21</div>
+            <div class="dia disponivel">22</div>
+            <div class="dia disponivel">23</div>
+            <div class="dia disponivel">24</div>
+            <div class="dia disponivel">25</div>
+            <div class="dia disponivel">26</div>
+            <div class="dia disponivel">27</div>
+            <div class="dia disponivel">28</div>
+            <div class="dia disponivel">29</div>
+            <div class="dia disponivel">30</div>
+            <div class="dia disponivel">31</div>
+            <div class="dia vazio"></div>
+            <div class="dia vazio"></div>
+            <div class="dia vazio"></div>
+            <div class="dia vazio"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <button id="voltar-topo" title="Voltar ao topo">↑</button>
 
   <footer>
     <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
@@ -50,6 +169,7 @@
       <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - São Paulo - SP</p>
     </div>
   </footer>
-    
+  
+  <script src="script.js"></script>
 </body>
 </html>
