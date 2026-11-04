@@ -149,80 +149,23 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const diasDisponiveis = document.querySelectorAll('.dia.disponivel');
     
-    diasDisponiveis.forEach(dia => {
-        dia.addEventListener('click', function() {
-            // Remover seleção anterior
-            document.querySelectorAll('.dia.selecionado').forEach(d => {
-                d.classList.remove('selecionado');
-            });
-            
-            // Adicionar seleção ao dia clicado
-            this.classList.add('selecionado');
-            
-            // Atualizar o campo de data no formulário
-            const dataInput = document.getElementById('data');
-            if (dataInput) {
-                const data = this.textContent;
-                const mes = document.querySelector('.mes h3').textContent;
-                dataInput.value = `${data} de ${mes}`;
-            }
-// Menu mobile
-document.addEventListener("DOMContentLoaded", function () {
-  const menuMobile = document.querySelector(".menu-mobile");
-  const menu = document.querySelector(".menu");
+    diasDisponiveis.forEach((dia) => {
+      dia.addEventListener("click", function () {
+        // Remover seleção anterior
+        document.querySelectorAll(".dia.selecionado").forEach((d) => {
+          d.classList.remove("selecionado");
+        });
 
-  if (menuMobile) {
-    menuMobile.addEventListener("click", function () {
-      menu.classList.toggle("menu-ativo");
-      menuMobile.classList.toggle("menu-mobile-ativo");
-    });
-  }
+        // Adicionar seleção ao dia clicado
+        this.classList.add("selecionado");
 
-  // Botão voltar ao topo
-  const botaoVoltarTopo = document.getElementById("voltar-topo");
-
-  if (botaoVoltarTopo) {
-    // Mostrar/esconder o botão baseado na posição do scroll
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset > 300) {
-        botaoVoltarTopo.style.display = "block";
-      } else {
-        botaoVoltarTopo.style.display = "none";
-      }
-    });
-
-    // Voltar ao topo quando o botão for clicado
-    botaoVoltarTopo.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-  }
-
-  // Lazy loading para imagens
-  const imagens = document.querySelectorAll("img[data-src]");
-
-  if (imagens.length > 0) {
-    const carregarImagem = function (entrada, observador) {
-      entrada.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-          const img = entrada.target;
-          img.src = img.dataset.src;
-          img.removeAttribute("data-src");
-          observador.unobserve(img);
+        // Atualizar o campo de data no formulário
+        const dataInput = document.getElementById("data");
+        if (dataInput) {
+          const data = this.textContent;
+          const mes = document.querySelector(".mes h3").textContent;
+          dataInput.value = `${data} de ${mes}`;
         }
       });
-    };
-
-    const observador = new IntersectionObserver(carregarImagem, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
     });
-
-    imagens.forEach((img) => {
-      observador.observe(img);
-    });
-  }
 });

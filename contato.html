@@ -156,7 +156,7 @@
 
             // Validar telefone
             const telefone = document.getElementById('telefone').value;
-            const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+            const telefoneRegex = /^\(\d{2}\) \d{5,4}-\d{4}$/;
             if (!telefoneRegex.test(telefone)) {
                 document.getElementById('erro-telefone').textContent = 'Digite um telefone válido (ex: (11) 99999-9999)';
                 valido = false;
