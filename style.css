@@ -264,10 +264,21 @@ em {
   gap: 24px;
 }
 
-.marca img {
-  height: 66px;
-  margin-block: -4px;
+.marca {
+  display: block;
+  line-height: 0;
+}
+
+.marca .logo {
+  display: block;
+  height: 60px;
   width: auto;
+  aspect-ratio: 400 / 266;
+  transition: transform var(--transicao);
+}
+
+.marca:hover .logo {
+  transform: rotate(-3deg) scale(1.04);
 }
 
 .menu {
@@ -1364,10 +1375,11 @@ select.input-padrao {
   padding-bottom: 56px;
 }
 
-.rodape-marca img {
-  height: 96px;
-  margin-left: -10px;
+.rodape-marca .logo {
+  display: block;
+  height: 104px;
   width: auto;
+  aspect-ratio: 400 / 266;
   margin-bottom: 18px;
 }
 
@@ -1474,6 +1486,7 @@ select.input-padrao {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .marca:hover .logo { transform: none; }
   .revelar { opacity: 1; transform: none; transition: none; }
   .botao:hover, .servico:hover { transform: none; }
 }
@@ -1505,8 +1518,8 @@ select.input-padrao {
     --altura-header: 68px;
   }
 
-  .marca img {
-    height: 56px;
+  .marca .logo {
+    height: 50px;
   }
 
   .menu-mobile {

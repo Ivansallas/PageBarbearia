@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Propostas de logo — Barbearia do Luiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;700;800&family=Pacifico&display=swap" rel="stylesheet" />
+<style>
+  :root { --tinta:#13110f; --tinta2:#1c1815; --creme:#efe6d8; --suave:#b4a894; --vermelho:#c8332b; --azul:#1f3a6b; --linha:rgba(239,230,216,.12); }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--tinta); color: var(--creme); font-family: Manrope, system-ui, sans-serif; line-height: 1.6; padding: 56px 24px 96px; }
+  .wrap { max-width: 1160px; margin: 0 auto; }
+  h1 { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 48px; line-height: 1.1; margin-bottom: 8px; }
+  .intro { color: var(--suave); max-width: 70ch; margin-bottom: 48px; }
+  .proposta { border: 1px solid var(--linha); border-radius: 16px; background: var(--tinta2); padding: 32px; margin-bottom: 32px; }
+  .proposta header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+  .proposta h2 { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 30px; }
+  .letra { font-size: 12px; font-weight: 800; letter-spacing: .2em; color: #fff; background: var(--vermelho); padding: 4px 10px; border-radius: 999px; }
+  .proposta.atual .letra { background: #555; }
+  .desc { color: var(--suave); margin-bottom: 24px; max-width: 75ch; }
+  .desc li { margin-left: 18px; }
+  .paineis { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .painel { border-radius: 12px; display: grid; place-items: center; padding: 32px; min-height: 280px; }
+  .painel.escuro { background: var(--tinta); border: 1px solid var(--linha); color: var(--creme); }
+  .painel.claro { background: var(--creme); color: var(--tinta); }
+  .painel svg, .painel img { width: 100%; max-width: 340px; height: auto; }
+  .usos { display: grid; grid-template-columns: 1fr auto; gap: 16px; margin-top: 16px; }
+  .cabecalho { background: rgba(19,17,15,.95); border: 1px solid var(--linha); border-radius: 12px; height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; color: var(--creme); }
+  .cabecalho .logo { height: 56px; width: auto; display: block; }
+  .cabecalho nav { display: flex; gap: 22px; font-size: 12px; font-weight: 700; letter-spacing: .12em; color: var(--suave); }
+  .cabecalho nav b { color: #fff; background: var(--vermelho); padding: 8px 12px; border-radius: 6px; }
+  .favicons { display: flex; align-items: center; gap: 14px; background: #2b2b2b; border-radius: 12px; padding: 0 20px; color: #ddd; font-size: 13px; }
+  .favicons svg, .favicons img { display: block; }
+  .rotulo { font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--suave); margin: 22px 0 8px; }
+  @media (max-width: 760px) { .paineis, .usos { grid-template-columns: 1fr; } .cabecalho nav { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ Definições dos logos (SVG) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Listras do poste de barbeiro -->
+    <pattern id="listras" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="9" height="18" fill="#c8332b" />
+      <rect x="9" width="9" height="18" fill="#efe6d8" />
+    </pattern>
+    <pattern id="listras-poste" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <rect width="8" height="24" fill="#c8332b" />
+      <rect x="8" width="4" height="24" fill="#efe6d8" />
+      <rect x="12" width="8" height="24" fill="#1f3a6b" />
+      <rect x="20" width="4" height="24" fill="#efe6d8" />
+    </pattern>
+
+    <!-- A · Brasão clássico (evolução do logo atual) -->
+    <clipPath id="clipA">
+      <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" />
+    </clipPath>
+    <symbol id="logoA" viewBox="0 0 420 290">
+      <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" fill="#1f3a6b" stroke="#13110f" stroke-width="16" stroke-linejoin="round" />
+      <g clip-path="url(#clipA)">
+        <rect x="0" y="72" width="420" height="20" fill="url(#listras)" />
+        <rect x="0" y="174" width="420" height="20" fill="url(#listras)" />
+      </g>
+      <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" fill="none" stroke="#efe6d8" stroke-width="6" stroke-linejoin="round" />
+      <text x="210" y="61" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="19" letter-spacing="9" fill="#efe6d8">DESDE 2019</text>
+      <text x="210" y="160" text-anchor="middle" font-family="Pacifico" font-size="82" textLength="372" lengthAdjust="spacingAndGlyphs" fill="#efe6d8" stroke="#13110f" stroke-width="14" stroke-linejoin="round" paint-order="stroke">Barbearia</text>
+      <!-- navalha -->
+      <g stroke="#13110f" stroke-width="4" stroke-linejoin="round">
+        <path d="M226 176 334 168Q350 167 350 177 350 186 336 186L226 186Z" fill="#dfe3e8" />
+        <path d="M226 176V186Q196 188 176 199 170 189 182 181 200 174 226 176Z" fill="#13110f" />
+      </g>
+      <text x="210" y="234" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="27" letter-spacing="7" fill="#efe6d8">DO LUIZ</text>
+    </symbol>
+
+    <!-- B · Selo circular -->
+    <clipPath id="clipPoste"><rect x="136" y="86" width="28" height="112" rx="6" /></clipPath>
+    <path id="arcoTopo" d="M30 150A120 120 0 0 1 270 150" />
+    <path id="arcoBase" d="M24 150A126 126 0 0 0 276 150" />
+    <symbol id="logoB" viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="144" fill="#13110f" />
+      <circle cx="150" cy="150" r="138" fill="#1f3a6b" stroke="#efe6d8" stroke-width="4" />
+      <circle cx="150" cy="150" r="102" fill="#13110f" stroke="#efe6d8" stroke-width="2" />
+      <text font-family="Manrope" font-weight="800" font-size="21" letter-spacing="5" fill="#efe6d8">
+        <textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">BARBEARIA DO LUIZ</textPath>
+      </text>
+      <text font-family="Manrope" font-weight="700" font-size="15" letter-spacing="6" fill="#efe6d8">
+        <textPath href="#arcoBase" startOffset="50%" text-anchor="middle">DESDE 2019</textPath>
+      </text>
+      <circle cx="21" cy="150" r="4" fill="#c8332b" />
+      <circle cx="279" cy="150" r="4" fill="#c8332b" />
+      <!-- poste de barbeiro -->
+      <circle cx="150" cy="66" r="9" fill="#efe6d8" />
+      <rect x="128" y="74" width="44" height="12" rx="4" fill="#efe6d8" />
+      <rect x="136" y="86" width="28" height="112" fill="url(#listras-poste)" clip-path="url(#clipPoste)" />
+      <rect x="136" y="86" width="28" height="112" rx="6" fill="none" stroke="#efe6d8" stroke-width="2" />
+      <rect x="128" y="198" width="44" height="12" rx="4" fill="#efe6d8" />
+      <rect x="140" y="210" width="20" height="10" rx="3" fill="#efe6d8" />
+      <text x="96" y="160" text-anchor="middle" font-family="DM Serif Display" font-size="30" fill="#efe6d8">B</text>
+      <text x="204" y="160" text-anchor="middle" font-family="DM Serif Display" font-size="30" fill="#efe6d8">L</text>
+    </symbol>
+
+    <!-- C · Horizontal (ícone + nome) -->
+    <clipPath id="clipPosteC"><rect x="38" y="24" width="20" height="48" rx="10" /></clipPath>
+    <symbol id="logoC" viewBox="0 0 330 96">
+      <circle cx="48" cy="48" r="44" fill="#1f3a6b" stroke="currentColor" stroke-width="3" />
+      <rect x="38" y="24" width="20" height="48" fill="url(#listras-poste)" clip-path="url(#clipPosteC)" />
+      <rect x="38" y="24" width="20" height="48" rx="10" fill="none" stroke="#efe6d8" stroke-width="2" />
+      <text x="112" y="36" font-family="Manrope" font-weight="800" font-size="14" letter-spacing="6.5" fill="#c8332b">BARBEARIA</text>
+      <text x="109" y="80" font-family="DM Serif Display" font-size="46" fill="currentColor">do Luiz</text>
+    </symbol>
+    <symbol id="iconeC" viewBox="0 0 96 96">
+      <circle cx="48" cy="48" r="44" fill="#1f3a6b" stroke="#efe6d8" stroke-width="4" />
+      <rect x="38" y="24" width="20" height="48" fill="url(#listras-poste)" clip-path="url(#clipPosteC)" />
+      <rect x="38" y="24" width="20" height="48" rx="10" fill="none" stroke="#efe6d8" stroke-width="3" />
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <h1>Propostas de logo</h1>
+  <p class="intro"><strong>Escolhida: A · Brasão clássico</strong>, aplicada no site na branch <code>site-renovado</code>.</p>
+  <p class="intro">Três caminhos para a Barbearia do Luiz, todos em vetor (SVG): ficam nítidos em qualquer tamanho, pesam poucos KB e já vêm com os acentos corrigidos. Cada proposta aparece em fundo escuro, em fundo claro, no cabeçalho do site e como ícone da aba do navegador.</p>
+
+  <!-- Atual -->
+  <section class="proposta atual">
+    <header><span class="letra">ATUAL</span><h2>Logo de hoje</h2></header>
+    <ul class="desc">
+      <li>Imagem pequena (567×320 px): fica borrada em telas grandes e serrilhada nas bordas.</li>
+      <li>Contorno branco do recorte aparece sobre fundo escuro.</li>
+      <li>Erros de acento: “BARBEARÍA” e “LUÍZ”.</li>
+      <li>Muita margem vazia: no cabeçalho o logo fica minúsculo.</li>
+      <li>Não tem versão quadrada para o ícone da aba (o site usava outro logo no lugar).</li>
+    </ul>
+    <div class="paineis">
+      <div class="painel escuro"><img src="../imagens/Imagem2.png" alt="Logo atual sobre fundo escuro" /></div>
+      <div class="painel claro"><img src="../imagens/Imagem2.png" alt="Logo atual sobre fundo claro" /></div>
+    </div>
+    <div class="usos">
+      <div class="cabecalho"><img class="logo" src="../imagens/Imagem2.png" alt="" /><nav><span>HOME</span><span>SERVIÇOS</span><span>CONTATO</span><b>AGENDAR</b></nav></div>
+      <div class="favicons"><img src="../imagens/Imagem2.png" width="32" height="18" alt="" /><img src="../imagens/Imagem2.png" width="16" height="9" alt="" /> aba</div>
+    </div>
+  </section>
+
+  <!-- A -->
+  <section class="proposta">
+    <header><span class="letra">A</span><h2>Brasão clássico</h2></header>
+    <p class="desc">Evolução fiel do logo atual: mesmo brasão azul, mesmas listras e a escrita “Barbearia” com a navalha, só que redesenhados e limpos. No topo, “DESDE 2019” substitui o “BARBEARIA” repetido. É o caminho mais seguro, porque os clientes reconhecem na hora.</p>
+    <div class="paineis">
+      <div class="painel escuro"><svg role="img" aria-label="Proposta A" viewBox="0 0 420 290"><use href="#logoA" /></svg></div>
+      <div class="painel claro"><svg role="img" aria-label="Proposta A" viewBox="0 0 420 290"><use href="#logoA" /></svg></div>
+    </div>
+    <div class="usos">
+      <div class="cabecalho"><svg class="logo" viewBox="0 0 420 290" style="width:81px"><use href="#logoA" /></svg><nav><span>HOME</span><span>SERVIÇOS</span><span>CONTATO</span><b>AGENDAR</b></nav></div>
+      <div class="favicons"><svg viewBox="0 0 420 290" width="32" height="22"><use href="#logoA" /></svg><svg viewBox="0 0 420 290" width="16" height="11"><use href="#logoA" /></svg> aba</div>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="proposta">
+    <header><span class="letra">B</span><h2>Selo circular</h2></header>
+    <p class="desc">Um carimbo vintage, com o poste de barbeiro no centro e o nome em volta. Funciona muito bem em placa, avental, cartão de visita e foto de perfil do Instagram e do WhatsApp, onde a imagem é cortada em círculo.</p>
+    <div class="paineis">
+      <div class="painel escuro"><svg role="img" aria-label="Proposta B" viewBox="0 0 300 300" style="max-width:260px"><use href="#logoB" /></svg></div>
+      <div class="painel claro"><svg role="img" aria-label="Proposta B" viewBox="0 0 300 300" style="max-width:260px"><use href="#logoB" /></svg></div>
+    </div>
+    <div class="usos">
+      <div class="cabecalho"><svg class="logo" viewBox="0 0 300 300" style="width:56px"><use href="#logoB" /></svg><nav><span>HOME</span><span>SERVIÇOS</span><span>CONTATO</span><b>AGENDAR</b></nav></div>
+      <div class="favicons"><svg viewBox="0 0 300 300" width="32" height="32"><use href="#logoB" /></svg><svg viewBox="0 0 300 300" width="16" height="16"><use href="#logoB" /></svg> aba</div>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="proposta">
+    <header><span class="letra">C</span><h2>Horizontal</h2></header>
+    <p class="desc">Ícone do poste ao lado do nome, nas mesmas fontes do site novo. É a versão mais legível no cabeçalho e no celular. O ícone sozinho vira o favicon (o ícone da aba do navegador).</p>
+    <div class="paineis">
+      <div class="painel escuro"><svg role="img" aria-label="Proposta C" viewBox="0 0 330 96"><use href="#logoC" /></svg></div>
+      <div class="painel claro"><svg role="img" aria-label="Proposta C" viewBox="0 0 330 96"><use href="#logoC" /></svg></div>
+    </div>
+    <div class="usos">
+      <div class="cabecalho"><svg class="logo" viewBox="0 0 330 96" style="height:48px;width:165px"><use href="#logoC" /></svg><nav><span>HOME</span><span>SERVIÇOS</span><span>CONTATO</span><b>AGENDAR</b></nav></div>
+      <div class="favicons" style="color:#efe6d8"><svg viewBox="0 0 96 96" width="32" height="32"><use href="#iconeC" /></svg><svg viewBox="0 0 96 96" width="16" height="16"><use href="#iconeC" /></svg> aba</div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

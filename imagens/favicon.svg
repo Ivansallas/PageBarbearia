@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ícone da aba: Brasão clássico simplificado (sem texto, para ficar legível em 16px) -->
+  <defs>
+    <pattern id="listras" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="4" height="8" fill="#c8332b" />
+      <rect x="4" width="4" height="8" fill="#efe6d8" />
+    </pattern>
+    <clipPath id="brasao">
+      <path d="M10 4H54Q60 4 60 10V40Q60 45 55 47L32 60 9 47Q4 45 4 40V10Q4 4 10 4Z" />
+    </clipPath>
+  </defs>
+  <path d="M10 4H54Q60 4 60 10V40Q60 45 55 47L32 60 9 47Q4 45 4 40V10Q4 4 10 4Z" fill="#1f3a6b" />
+  <g clip-path="url(#brasao)">
+    <rect x="0" y="13" width="64" height="8" fill="url(#listras)" />
+    <rect x="0" y="37" width="64" height="8" fill="url(#listras)" />
+  </g>
+  <!-- navalha -->
+  <path d="M28 27 50 25Q54 25 54 28 54 31 50 31L28 31Z" fill="#efe6d8" />
+  <path d="M28 27V31Q18 32 12 36 11 32 15 30 21 27 28 27Z" fill="#13110f" stroke="#efe6d8" stroke-width="1.5" stroke-linejoin="round" />
+  <path d="M10 4H54Q60 4 60 10V40Q60 45 55 47L32 60 9 47Q4 45 4 40V10Q4 4 10 4Z" fill="none" stroke="#efe6d8" stroke-width="3" stroke-linejoin="round" />
+</svg>

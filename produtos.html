@@ -6,21 +6,48 @@
   <meta name="description" content="Corte de cabelo, barba e pacote completo na Barbearia do Luiz. Veja preços e agende online." />
   <meta name="theme-color" content="#13110f" />
   <title>Serviços e preços — Barbearia do Luiz</title>
-  <link rel="icon" href="imagens/logo.png" type="image/png" />
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Logo "Brasão clássico": definido uma vez e reaproveitado no cabeçalho e no rodapé -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="logo-listras" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+        <rect width="9" height="18" fill="#c8332b" />
+        <rect x="9" width="9" height="18" fill="#efe6d8" />
+      </pattern>
+      <clipPath id="logo-recorte">
+        <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" />
+      </clipPath>
+      <symbol id="logo-brasao" viewBox="10 18 400 266">
+        <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" fill="#1f3a6b" stroke="#13110f" stroke-width="16" stroke-linejoin="round" />
+        <g clip-path="url(#logo-recorte)">
+          <rect x="0" y="72" width="420" height="20" fill="url(#logo-listras)" />
+          <rect x="0" y="174" width="420" height="20" fill="url(#logo-listras)" />
+        </g>
+        <path d="M60 30H360Q376 30 376 46V196Q376 212 362 220L210 276 58 220Q44 212 44 196V46Q44 30 60 30Z" fill="none" stroke="#efe6d8" stroke-width="6" stroke-linejoin="round" />
+        <text x="210" y="61" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="19" letter-spacing="9" fill="#efe6d8">DESDE 2019</text>
+        <text x="210" y="160" text-anchor="middle" font-family="Pacifico, cursive" font-size="82" textLength="372" lengthAdjust="spacingAndGlyphs" fill="#efe6d8" stroke="#13110f" stroke-width="14" stroke-linejoin="round" paint-order="stroke">Barbearia</text>
+        <g stroke="#13110f" stroke-width="4" stroke-linejoin="round">
+          <path d="M226 176 334 168Q350 167 350 177 350 186 336 186L226 186Z" fill="#dfe3e8" />
+          <path d="M226 176V186Q196 188 176 199 170 189 182 181 200 174 226 176Z" fill="#13110f" />
+        </g>
+        <text x="210" y="234" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="27" letter-spacing="7" fill="#efe6d8">DO LUIZ</text>
+      </symbol>
+    </defs>
+  </svg>
   <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
     <div class="container">
       <a href="index.html" class="marca" aria-label="Barbearia do Luiz — página inicial">
-        <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+        <svg class="logo" viewBox="10 18 400 266" role="img" aria-label="Barbearia do Luiz"><use href="#logo-brasao" /></svg>
       </a>
       <nav aria-label="Menu principal">
         <button class="menu-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
@@ -133,7 +160,7 @@
     <div class="container">
       <div class="rodape-grid">
         <div class="rodape-marca">
-          <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+          <svg class="logo" viewBox="10 18 400 266" role="img" aria-label="Barbearia do Luiz"><use href="#logo-brasao" /></svg>
           <p>Autoestima e qualidade de vida, um corte de cada vez.</p>
           <div class="rodape-redes">
             <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
