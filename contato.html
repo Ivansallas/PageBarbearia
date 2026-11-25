@@ -1,195 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Contatos - Barbearia Luiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fale com a Barbearia do Luiz pelo formulário, WhatsApp ou redes sociais." />
+  <meta name="theme-color" content="#13110f" />
+  <title>Contato — Barbearia do Luiz</title>
+  <link rel="icon" href="imagens/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="caixa">
-            <h1><img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo" /></h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="contato.html">Contatos</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
-                </ul>
-                <div class="menu-mobile">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <form id="formulario-contato" action="processar-formulario.php" onsubmit="return validarFormulario()">
-            <h2 class="titulo">Contato da Barbearia Luiz</h2>
-            <div class="form-grupo">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="input-padrao" required>
-                <span class="erro-mensagem" id="erro-nome"></span>
-                </div>
+  <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo</a>
 
-            <div class="form-grupo">
-                <label for="sobrenome">Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" class="input-padrao" required>
-                <span class="erro-mensagem" id="erro-sobrenome"></span>
-                </div>
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca" aria-label="Barbearia do Luiz — página inicial">
+        <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+      </a>
+      <nav aria-label="Menu principal">
+        <button class="menu-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Serviços</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+          <li><a href="agenda.html" class="botao botao-primario">Agendar horário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="faixa-poste" aria-hidden="true"></div>
 
-            <div class="form-grupo">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email" class="input-padrao" required>
-                <span class="erro-mensagem" id="erro-email"></span>
-                </div>
+  <main id="conteudo">
+    <section class="cabecalho-pagina">
+      <div class="container">
+        <p class="rotulo">Contato</p>
+        <h1>Vamos <em>conversar</em>.</h1>
+        <p class="subtitulo">Dúvidas, sugestões ou um pedido especial? Mande uma mensagem e a gente responde do jeito que você preferir.</p>
+      </div>
+    </section>
 
-            <div class="form-grupo">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" class="input-padrao" required>
-                <span class="erro-mensagem" id="erro-telefone"></span>
-                </div>
+    <section class="secao">
+      <div class="container contato-grid">
+        <form id="formulario-contato" class="cartao revelar" novalidate>
+          <h2>Envie sua mensagem</h2>
+          <p>Todos os campos são obrigatórios, exceto quando indicado.</p>
 
-            <div class="form-grupo">
-                <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" class="input-padrao"
-                    required></textarea>
-                <span class="erro-mensagem" id="erro-mensagem"></span>
-                </div>
-            
-            <div class="contato">
-                <p>Qual a forma de contato?</p>
-                <div class="radio-grupo">
-                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
-                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
-                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">WhatsApp</label>
-                </div>
+          <div class="campos">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="input-padrao" placeholder="Seu nome" autocomplete="given-name" required minlength="3" />
+              <span class="erro-mensagem" aria-live="polite"></span>
             </div>
-            <div class="horario">
-                <p>Qual horário prefere ser atendido?</p>
-                <select name="horario" id="horario" class="input-padrao">
-                    <option value="manha">Manhã</option>
-                    <option value="tarde">Tarde</option>
-                    <option value="noite">Noite</option>
-                </select>
+            <div class="campo">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" id="sobrenome" name="sobrenome" class="input-padrao" placeholder="Seu sobrenome" autocomplete="family-name" required minlength="2" />
+              <span class="erro-mensagem" aria-live="polite"></span>
             </div>
-            <label class="checkbox"><input type="checkbox" name="receber-email">Gostaria de receber nossos emails?</label>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" class="input-padrao" placeholder="voce@email.com" autocomplete="email" required />
+              <span class="erro-mensagem" aria-live="polite"></span>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" class="input-padrao" placeholder="(11) 99999-9999" autocomplete="tel" inputmode="numeric" required data-mascara="telefone" />
+              <span class="erro-mensagem" aria-live="polite"></span>
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="input-padrao" rows="5" placeholder="Como podemos ajudar?" required minlength="10"></textarea>
+              <span class="erro-mensagem" aria-live="polite"></span>
+            </div>
 
-            <button type="submit" class="enviar">Enviar Formulário</button>
+            <fieldset class="campo opcoes">
+              <legend>Como prefere que a gente responda?</legend>
+              <div class="opcoes-lista">
+                <label class="opcao"><input type="radio" name="contato" value="WhatsApp" checked /><span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</span></label>
+                <label class="opcao"><input type="radio" name="contato" value="Telefone" /><span><i class="fa-solid fa-phone" aria-hidden="true"></i> Telefone</span></label>
+                <label class="opcao"><input type="radio" name="contato" value="E-mail" /><span><i class="fa-regular fa-envelope" aria-hidden="true"></i> E-mail</span></label>
+              </div>
+            </fieldset>
+
+            <div class="campo">
+              <label for="periodo">Melhor período para contato</label>
+              <select id="periodo" name="periodo" class="input-padrao">
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+              </select>
+            </div>
+
+            <div class="campo campo-inteiro">
+              <label class="checkbox"><input type="checkbox" name="receber-email" /> Quero receber novidades e promoções por e-mail</label>
+            </div>
+          </div>
+
+          <div class="form-acoes">
+            <button type="submit" class="botao botao-primario botao-largo">Enviar mensagem <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+
+          <div class="aviso" role="status" aria-live="polite">
+            <strong><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Mensagem pronta!</strong>
+            <p>Obrigado pelo contato. Para uma resposta mais rápida, envie também pelo WhatsApp — a mensagem já vai preenchida.</p>
+            <a href="#" class="botao botao-whatsapp" target="_blank" rel="noopener" data-whatsapp><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar pelo WhatsApp</a>
+          </div>
         </form>
-        <section class="redes-sociais">
-            <h2 class="titulo">Siga-nos nas Redes Sociais</h2>
-            <div class="redes-container">
-                <a href="https://facebook.com" target="_blank" class="rede-social">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Facebook</span>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="rede-social">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://wa.me/5511999999999" target="_blank" class="rede-social">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://youtube.com" target="_blank" class="rede-social">
-                    <i class="fab fa-youtube"></i>
-                    <span>YouTube</span>
-                </a>
+
+        <aside class="contato-lateral">
+          <div class="cartao revelar">
+            <h3>Atendimento rápido</h3>
+            <p>Prefere falar direto? Chama no WhatsApp.</p>
+            <a href="https://wa.me/5511999999999" class="botao botao-whatsapp botao-largo" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> (11) 99999-9999</a>
+          </div>
+          <div class="cartao revelar">
+            <h3>Siga a gente</h3>
+            <p>Cortes novos, bastidores e promoções.</p>
+            <div class="redes">
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="rede-social"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="rede-social"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
+              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="rede-social"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="rede-social"><i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube</a>
             </div>
-        </section>
-        
-        <section class="mapa-contato">
-            <h2 class="titulo">Nossa Localização</h2>
-            <div class="mapa-conteudo">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
-                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-        </section>
-    </main>
-    <button id="voltar-topo" title="Voltar ao topo">↑</button>
-    <footer>
-        <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
-        <div class="copyright">
-            <p>Barbearia do Luiz - Todos os direitos reservados</p>
-            <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - Cidade: São Paulo - SP</p>
-        </div>    
-    </footer>
-    <script src="script.js"></script>
-    <script>
-        function validarFormulario() {
-            let valido = true;
+          </div>
+          <div class="cartao revelar">
+            <h3>Visite a barbearia</h3>
+            <ul class="lista-info">
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><span>Endereço</span>Rua dos Bobos, nº 0 — Jardim dos Tolos, São Paulo - SP</div></li>
+              <li><i class="fa-regular fa-clock" aria-hidden="true"></i><div><span>Horário</span>Seg a Sex, 08h–18h · Sáb, 08h–12h</div></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-            // Validar nome
-            const nome = document.getElementById('nome').value;
-            if (nome.length < 3) {
-                document.getElementById('erro-nome').textContent = 'O nome deve ter pelo menos 3 caracteres';
-                valido = false;
-            } else {
-                document.getElementById('erro-nome').textContent = '';
-            }
+    <section class="secao secao-alt">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <p class="rotulo">Localização</p>
+          <h2 class="titulo">Como chegar</h2>
+        </div>
+        <div class="mapa revelar">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
+            title="Mapa com a localização da Barbearia do Luiz" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            // Validar sobrenome
-            const sobrenome = document.getElementById('sobrenome').value;
-            if (sobrenome.length < 3) {
-                document.getElementById('erro-sobrenome').textContent = 'O sobrenome deve ter pelo menos 3 caracteres';
-                valido = false;
-            } else {
-                document.getElementById('erro-sobrenome').textContent = '';
-            }
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <div class="rodape-marca">
+          <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+          <p>Autoestima e qualidade de vida, um corte de cada vez.</p>
+          <div class="rodape-redes">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="agenda.html">Agendar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horário</h4>
+          <ul>
+            <li>Seg a Sex · 08h–18h</li>
+            <li>Sábado · 08h–12h</li>
+            <li>Domingo · Fechado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Endereço</h4>
+          <p>Rua dos Bobos, nº 0<br />Jardim dos Tolos<br />São Paulo - SP</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span class="ano-atual">2026</span> Barbearia do Luiz. Todos os direitos reservados.</p>
+        <p>Feito com cuidado, como um bom corte.</p>
+      </div>
+    </div>
+  </footer>
 
-            // Validar email
-            const email = document.getElementById('email').value;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                document.getElementById('erro-email').textContent = 'Digite um email válido';
-                valido = false;
-            } else {
-                document.getElementById('erro-email').textContent = '';
-            }
+  <button id="voltar-topo" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
 
-            // Validar telefone
-            const telefone = document.getElementById('telefone').value;
-            const telefoneRegex = /^\(\d{2}\) \d{5,4}-\d{4}$/;
-            if (!telefoneRegex.test(telefone)) {
-                document.getElementById('erro-telefone').textContent = 'Digite um telefone válido (ex: (11) 99999-9999)';
-                valido = false;
-            } else {
-                document.getElementById('erro-telefone').textContent = '';
-            }
-
-            // Validar mensagem
-            const mensagem = document.getElementById('mensagem').value;
-            if (mensagem.length < 10) {
-                document.getElementById('erro-mensagem').textContent = 'A mensagem deve ter pelo menos 10 caracteres';
-                valido = false;
-            } else {
-                document.getElementById('erro-mensagem').textContent = '';
-            }
-
-            return valido;
-        }
-
-        // Máscara para telefone
-        document.getElementById('telefone').addEventListener('input', function (e) {
-            let valor = e.target.value.replace(/\D/g, '');
-            if (valor.length > 11) valor = valor.slice(0, 11);
-
-            if (valor.length > 2) {
-                valor = '(' + valor.slice(0, 2) + ') ' + valor.slice(2);
-            }
-            if (valor.length > 9) {
-                valor = valor.slice(0, 9) + '-' + valor.slice(9);
-            }
-
-            e.target.value = valor;
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>

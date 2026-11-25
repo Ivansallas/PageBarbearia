@@ -3,118 +3,308 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Barbearia do Luiz — cortes de cabelo, barba e atendimento de primeira no coração de São Paulo. Agende seu horário online." />
+  <meta name="theme-color" content="#13110f" />
+  <title>Barbearia do Luiz — Corte, barba e estilo</title>
+  <link rel="icon" href="imagens/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
-  <title>Home - Barbearia do Luiz</title>
 </head>
 <body>
-  <header>
-    <div class="caixa">
-      <h1>
-        <img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo" />
-      </h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="contato.html">Contatos</a></li>
-          <li><a href="agenda.html">Agenda</a></li>
+  <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca" aria-label="Barbearia do Luiz — página inicial">
+        <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+      </a>
+      <nav aria-label="Menu principal">
+        <button class="menu-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="produtos.html">Serviços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="agenda.html" class="botao botao-primario">Agendar horário</a></li>
         </ul>
-        <div class="menu-mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
     </div>
   </header>
-  
-  <img src="imagens/banner.jpg" alt="Ambiente da Barbearia do Luiz" class="image-banner" />
+  <div class="faixa-poste" aria-hidden="true"></div>
 
-  <main>
-    <section class="banner">
-    
-    <div class="principal">
-      <h1 class="titulo">Sobre a Barbearia do Luiz</h1>
-      <img src="imagens/utensilios.jpg" alt="Utensílios de barbearia" class="utensilios">
-      <p>Seja bem-vindo à <strong>Barbearia do Luiz</strong>, o lugar perfeito para cuidar do seu visual! Aqui, Oferecemos um ambiente descontraído e acolhedor, onde você pode relaxar enquanto nossos profissionais cuidam de você.</p>
-      <p>Com uma equipe de barbeiros experientes e apaixonados pelo que fazem, garantimos um atendimento de qualidade.</p>
-      <p>Localizada no coração da cidade, a <strong>Barbearia do Luiz</strong> traz o que há de melhor para o seu cabelo e barba. Fundada em 2019, já é destaque na cidade e conquista novos clientes a cada dia.</p>
-      <p><em>Nossa missão: <strong>"Proporcionar autoestima e qualidade de vida aos clientes"</strong>.</em></p>
-      <p>Oferecemos profissionais experientes e antenados às mudanças do mundo da moda. Nosso atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação.</p>
-    </div>
-
-  </section>
-  <section class="mapa">
-    <h3 class="titulo">
-      Nosso estabelecimento
-    </h3>
-    <p>Nosso estabelecimento está localizado no coração da cidade, com fácil acesso e estacionamento.</p>
-
-    <div class="mapa-conteudo">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
-        width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    </div> 
-    
-  </section>
-  
-  
-  <div class="conteudo-beneficios">
-      <h2 class="titulo">Benefícios</h2>
-    <section class="beneficios">
-      <ul class="lista-beneficios">
-        <li class="itens">Atendimento aos Clientes</li>
-        <li class="itens">Espaço diferenciado</li>
-        <li class="itens">Localização</li>
-        <li class="itens">Profissionais Qualificados</li>
-        <li class="itens">Pontualidade</li>
-        <li class="itens">Limpeza</li>
-      </ul>
-      <img src="imagens/beneficios.jpg" alt="Imagem ilustrando os benefícios" class="imagem-beneficios" />
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-conteudo">
+          <p class="rotulo">Barbearia desde 2019</p>
+          <h1>Corte clássico,<br /><em>atendimento</em> de primeira.</h1>
+          <p>No coração da cidade, a Barbearia do Luiz cuida do seu cabelo e da sua barba com técnica, cuidado e atenção aos detalhes.</p>
+          <div class="hero-acoes">
+            <a href="agenda.html" class="botao botao-primario">Agendar horário <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="produtos.html" class="botao botao-secundario">Ver serviços e preços</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-  </div>
-  
-  <div class="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <!-- Informações rápidas -->
+    <section class="info-rapida" aria-label="Informações rápidas">
+      <div class="container">
+        <ul>
+          <li><span>Seg a Sex</span><strong>08h – 18h</strong></li>
+          <li><span>Sábado</span><strong>08h – 12h</strong></li>
+          <li><span>Serviços a partir de</span><strong>R$ 35</strong></li>
+          <li><span>Onde</span><strong>Centro · São Paulo</strong></li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="depoimentos">
-    <h2 class="titulo">O que nossos clientes dizem</h2>
-    <div class="depoimentos-container">
-      <div class="depoimento">
-        <p>"Melhor barbearia da cidade! Atendimento excelente e profissionais muito qualificados."</p>
-        <span class="cliente">- João Silva</span>
+    <!-- Sobre -->
+    <section class="secao" id="sobre">
+      <div class="container sobre">
+        <div class="sobre-imagem revelar">
+          <img src="imagens/banner.jpg" alt="Interior da Barbearia do Luiz com cadeiras clássicas de couro" loading="lazy" />
+          <div class="selo"><strong>2019</strong><span>Fundada em</span></div>
+        </div>
+        <div class="revelar">
+          <p class="rotulo">Sobre nós</p>
+          <h2 class="titulo">O lugar certo para cuidar do <em>seu visual</em>.</h2>
+          <div class="texto">
+            <p>Seja bem-vindo à <strong>Barbearia do Luiz</strong>. Aqui você encontra um ambiente descontraído e acolhedor, onde pode relaxar enquanto nossos profissionais cuidam de você.</p>
+            <p>Nossa equipe é formada por barbeiros experientes, apaixonados pelo que fazem e antenados às mudanças do mundo da moda. Atendimento com padrão de excelência e agilidade, do primeiro corte ao acabamento.</p>
+            <p>Localizada no coração da cidade, a barbearia já é destaque desde 2019 e conquista novos clientes a cada dia.</p>
+          </div>
+          <blockquote class="missao">
+            <span>Nossa missão</span>
+            “Proporcionar autoestima e qualidade de vida aos clientes.”
+          </blockquote>
+        </div>
       </div>
-      <div class="depoimento">
-        <p>"Sempre saio satisfeito com o serviço. Ambiente agradável e preços justos."</p>
-        <span class="cliente">- Pedro Santos</span>
-      </div>
-      <div class="depoimento">
-        <p>"Já sou cliente há mais de 2 anos e nunca me decepcionei. Recomendo!"</p>
-        <span class="cliente">- Carlos Oliveira</span>
-      </div>
-    </div>
-  </section>
-  
-  <div class="agendar-container">
-    <a href="agenda.html" class="botao-agendar">Agendar Horário</a>
-  </div>
+    </section>
 
+    <!-- Serviços -->
+    <section class="secao secao-alt" id="servicos">
+      <div class="container">
+        <div class="cabecalho-secao centro revelar">
+          <p class="rotulo">Serviços</p>
+          <h2 class="titulo">Do corte à barba desenhada</h2>
+          <p class="subtitulo">Preços claros, sem surpresa. Escolha o serviço e agende em menos de um minuto.</p>
+        </div>
+        <ul class="servicos">
+          <li class="servico revelar">
+            <img src="imagens/cabelo.jpg" alt="" class="servico-icone" />
+            <h3>Cabelo</h3>
+            <p>Na tesoura ou na máquina, como você preferir.</p>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>40</span>
+              <a href="agenda.html?servico=cabelo" class="link-seta">Agendar</a>
+            </div>
+          </li>
+          <li class="servico revelar">
+            <img src="imagens/barba.jpg" alt="" class="servico-icone" />
+            <h3>Barba</h3>
+            <p>Corte e desenho profissional de barba.</p>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>35</span>
+              <a href="agenda.html?servico=barba" class="link-seta">Agendar</a>
+            </div>
+          </li>
+          <li class="servico servico-destaque revelar">
+            <span class="etiqueta">Mais pedido</span>
+            <img src="imagens/cabelo+barba.jpg" alt="" class="servico-icone" />
+            <h3>Cabelo + Barba</h3>
+            <p>O pacote completo para sair renovado.</p>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>70</span>
+              <a href="agenda.html?servico=cabelo+barba" class="link-seta">Agendar</a>
+            </div>
+          </li>
+        </ul>
+        <div class="secao-rodape">
+          <a href="produtos.html" class="botao botao-secundario">Ver todos os detalhes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="secao" id="beneficios">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <p class="rotulo">Por que a gente</p>
+          <h2 class="titulo">Detalhes que fazem você voltar</h2>
+        </div>
+        <ul class="beneficios revelar">
+          <li>
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <h3>Atendimento</h3>
+            <p>Você é recebido pelo nome e ouvido antes da primeira tesourada.</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-couch" aria-hidden="true"></i>
+            <h3>Espaço diferenciado</h3>
+            <p>Ambiente clássico e confortável, feito para relaxar.</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <h3>Localização</h3>
+            <p>No centro da cidade, com fácil acesso e estacionamento.</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+            <h3>Profissionais qualificados</h3>
+            <p>Barbeiros experientes e atualizados com as tendências.</p>
+          </li>
+          <li>
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <h3>Pontualidade</h3>
+            <p>Horário marcado é horário cumprido. Seu tempo vale.</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>
+            <h3>Limpeza</h3>
+            <p>Ferramentas higienizadas e espaço impecável a cada cliente.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Vídeo -->
+    <section class="secao secao-alt" id="video">
+      <div class="container">
+        <div class="cabecalho-secao centro revelar">
+          <p class="rotulo">Por dentro</p>
+          <h2 class="titulo">Veja como trabalhamos</h2>
+        </div>
+        <div class="video revelar">
+          <iframe src="https://www.youtube.com/embed/wcVVXUV0YUY" title="Vídeo da Barbearia do Luiz" loading="lazy"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="secao" id="depoimentos">
+      <div class="container">
+        <div class="cabecalho-secao centro revelar">
+          <p class="rotulo">Depoimentos</p>
+          <h2 class="titulo">O que nossos clientes dizem</h2>
+        </div>
+        <div class="depoimentos">
+          <figure class="depoimento revelar">
+            <blockquote>Melhor barbearia da cidade! Atendimento excelente e profissionais muito qualificados.</blockquote>
+            <figcaption>
+              <div class="estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+              <cite>João Silva</cite>
+            </figcaption>
+          </figure>
+          <figure class="depoimento revelar">
+            <blockquote>Sempre saio satisfeito com o serviço. Ambiente agradável e preços justos.</blockquote>
+            <figcaption>
+              <div class="estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+              <cite>Pedro Santos</cite>
+            </figcaption>
+          </figure>
+          <figure class="depoimento revelar">
+            <blockquote>Já sou cliente há mais de 2 anos e nunca me decepcionei. Recomendo!</blockquote>
+            <figcaption>
+              <div class="estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+              <cite>Carlos Oliveira</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="secao secao-alt" id="localizacao">
+      <div class="container local">
+        <div class="revelar">
+          <p class="rotulo">Onde estamos</p>
+          <h2 class="titulo">Nosso estabelecimento</h2>
+          <p class="subtitulo">No coração da cidade, com fácil acesso e estacionamento.</p>
+          <ul class="lista-info">
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div><span>Endereço</span>Rua dos Bobos, nº 0 — Jardim dos Tolos, São Paulo - SP</div>
+            </li>
+            <li>
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <div><span>Horário</span>Seg a Sex, 08h às 18h · Sáb, 08h às 12h</div>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <div><span>WhatsApp</span><a href="https://wa.me/5511999999999" target="_blank" rel="noopener">(11) 99999-9999</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="mapa revelar">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
+            title="Mapa com a localização da Barbearia do Luiz" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="chamada">
+      <div class="container">
+        <h2>Bora dar um tapa no visual?</h2>
+        <p>Escolha o dia, o horário e o serviço. A gente cuida do resto.</p>
+        <a href="agenda.html" class="botao">Agendar meu horário <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
   </main>
 
-  <button id="voltar-topo" title="Voltar ao topo">↑</button>
-
-  <footer>
-    <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
-    <div class="copyright">
-      <p>Barbearia do Luiz - Todos os direitos reservados</p>
-      <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - São Paulo - SP</p>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <div class="rodape-marca">
+          <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+          <p>Autoestima e qualidade de vida, um corte de cada vez.</p>
+          <div class="rodape-redes">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="agenda.html">Agendar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horário</h4>
+          <ul>
+            <li>Seg a Sex · 08h–18h</li>
+            <li>Sábado · 08h–12h</li>
+            <li>Domingo · Fechado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Endereço</h4>
+          <p>Rua dos Bobos, nº 0<br />Jardim dos Tolos<br />São Paulo - SP</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span class="ano-atual">2026</span> Barbearia do Luiz. Todos os direitos reservados.</p>
+        <p>Feito com cuidado, como um bom corte.</p>
+      </div>
     </div>
   </footer>
-<script src="script.js"></script>
+
+  <button id="voltar-topo" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <script src="script.js"></script>
 </body>
 </html>

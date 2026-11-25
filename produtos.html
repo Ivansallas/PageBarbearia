@@ -1,67 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Produtos - Barbearia do Luiz</title>
-  </head>
-  
-  <body>
-    <header>
-      <div class="caixa">
-        <h1>
-          <img src="imagens/Imagem2.png" alt="Logo da Barbearia do Luiz" class="imagen-logo"/>
-        </h1>
-        <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corte de cabelo, barba e pacote completo na Barbearia do Luiz. Veja preços e agende online." />
+  <meta name="theme-color" content="#13110f" />
+  <title>Serviços e preços — Barbearia do Luiz</title>
+  <link rel="icon" href="imagens/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container">
+      <a href="index.html" class="marca" aria-label="Barbearia do Luiz — página inicial">
+        <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+      </a>
+      <nav aria-label="Menu principal">
+        <button class="menu-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html" aria-current="page">Serviços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="agenda.html" class="botao botao-primario">Agendar horário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="faixa-poste" aria-hidden="true"></div>
+
+  <main id="conteudo">
+    <section class="cabecalho-pagina">
+      <div class="container">
+        <p class="rotulo">Serviços e preços</p>
+        <h1>Estilo, cuidado e <em>atenção</em> aos detalhes.</h1>
+        <p class="subtitulo">Na Barbearia do Luiz entregamos muito mais do que um corte de cabelo. Trabalhamos com produtos de alta qualidade, escolhidos para garantir a saúde dos seus cabelos e da sua barba.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <ul class="servicos">
+          <li class="servico revelar">
+            <img src="imagens/cabelo.jpg" alt="" class="servico-icone" />
+            <h3>Cabelo</h3>
+            <p>Na tesoura ou na máquina, como você preferir.</p>
+            <ul>
+              <li>Corte personalizado para o seu estilo</li>
+              <li>Tesoura, máquina ou os dois</li>
+              <li>Finalização com produtos de qualidade</li>
+            </ul>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>40</span>
+              <a href="agenda.html?servico=cabelo" class="botao botao-secundario">Agendar</a>
+            </div>
+          </li>
+          <li class="servico revelar">
+            <img src="imagens/barba.jpg" alt="" class="servico-icone" />
+            <h3>Barba</h3>
+            <p>Corte e desenho profissional de barba.</p>
+            <ul>
+              <li>Barba desenhada sob medida</li>
+              <li>Contorno e acabamento</li>
+              <li>Produtos para pele e fios</li>
+            </ul>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>35</span>
+              <a href="agenda.html?servico=barba" class="botao botao-secundario">Agendar</a>
+            </div>
+          </li>
+          <li class="servico servico-destaque revelar">
+            <span class="etiqueta">Mais pedido</span>
+            <img src="imagens/cabelo+barba.jpg" alt="" class="servico-icone" />
+            <h3>Cabelo + Barba</h3>
+            <p>O pacote completo de cabelo e barba.</p>
+            <ul>
+              <li>Os dois serviços no mesmo horário</li>
+              <li>Visual alinhado de ponta a ponta</li>
+              <li>R$ 5 a menos que os serviços separados</li>
+            </ul>
+            <div class="servico-rodape">
+              <span class="preco"><small>R$</small>70</span>
+              <a href="agenda.html?servico=cabelo+barba" class="botao botao-primario">Agendar</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="secao secao-alt">
+      <div class="container sobre">
+        <div class="revelar">
+          <p class="rotulo">Também fazemos</p>
+          <h2 class="titulo">Tratamentos que elevam a <em>autoestima</em></h2>
+          <div class="texto">
+            <p>Nossos cortes são feitos sob medida para valorizar o seu estilo e a sua personalidade. Além deles, realizamos tratamentos modernos para cabelo e barba.</p>
+            <p>Com um <strong>ambiente confortável e atendimento profissional</strong>, buscamos proporcionar uma experiência completa, para que cada visita seja única.</p>
+          </div>
+          <ul class="lista-info">
+            <li><i class="fa-solid fa-droplet" aria-hidden="true"></i><div><span>Cabelo</span>Hidratação capilar</div></li>
+            <li><i class="fa-solid fa-palette" aria-hidden="true"></i><div><span>Barba e cabelo</span>Pigmentação</div></li>
+            <li><i class="fa-solid fa-pen-nib" aria-hidden="true"></i><div><span>Barba</span>Barba desenhada</div></li>
+          </ul>
+          <div class="form-acoes">
+            <a href="contato.html" class="link-seta">Consulte valores dos tratamentos</a>
+          </div>
+        </div>
+        <div class="sobre-imagem revelar">
+          <img src="imagens/utensilios.jpg" alt="Utensílios de barbearia: tesouras, pentes e navalha" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="chamada">
+      <div class="container">
+        <h2>Já escolheu o seu?</h2>
+        <p>Agende online e garanta seu horário.</p>
+        <a href="agenda.html" class="botao">Agendar horário <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <div class="rodape-marca">
+          <img src="imagens/Imagem2.png" alt="Barbearia do Luiz" />
+          <p>Autoestima e qualidade de vida, um corte de cada vez.</p>
+          <div class="rodape-redes">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="contato.html">Contatos</a></li>
-            <li><a href="agenda.html">Agenda</a></li>
-
+            <li><a href="produtos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="agenda.html">Agendar</a></li>
           </ul>
-        </nav>
+        </div>
+        <div>
+          <h4>Horário</h4>
+          <ul>
+            <li>Seg a Sex · 08h–18h</li>
+            <li>Sábado · 08h–12h</li>
+            <li>Domingo · Fechado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Endereço</h4>
+          <p>Rua dos Bobos, nº 0<br />Jardim dos Tolos<br />São Paulo - SP</p>
+        </div>
       </div>
-    </header>
-    <main>
-      <h2 class="titulo-produtos">Nossos Produtos e Serviços</h2>
-      <div class="texto-conteudo">
-          <p>Nossos Produtos e Serviços
-            Na <strong>Barbearia do Luiz,</strong> oferecemos muito mais do que apenas um corte de cabelo — entregamos estilo, cuidado e atenção aos detalhes. Trabalhamos com produtos de alta qualidade, escolhidos especialmente para garantir a saúde e o bem-estar dos seus cabelos e barba.
-            Nossos cortes são personalizados, feitos sob medida para valorizar o seu estilo e personalidade. Também realizamos barbas desenhadas, hidratação capilar, pigmentação e outros tratamentos modernos que elevam sua autoestima.
-            Com um <strong>ambiente confortável e atendimento profissional,</strong> buscamos sempre proporcionar uma experiência completa, para que cada visita seja única e inesquecível.</p>
+      <div class="copyright">
+        <p>© <span class="ano-atual">2026</span> Barbearia do Luiz. Todos os direitos reservados.</p>
+        <p>Feito com cuidado, como um bom corte.</p>
       </div>
-      <ul class="produtos">
-        <li>
-          <h2>Cabelo</h2>
-          <img src="imagens/cabelo.jpg" alt="Corte de cabelo" />
-          <p class="produto-descricao">
-            Na tesoura ou máquina, como o cliente preferir
-          </p>
-          <p class="produto-preco">R$ 40,00</p>
-        </li>
-        <li>
-          <h2>Barba</h2>
-          <img src="imagens/barba.jpg" alt="Corte de barba" />
-          <p class="produto-descricao">Corte e desenho profissional de barba</p>
-          <p class="produto-preco">R$ 35,00</p>
-        </li>
-        <li>
-          <h2>Cabelo + Barba</h2>
-          <img src="imagens/cabelo+barba.jpg" alt="Corte de cabelo e barba" />
-          <p class="produto-descricao">Pacote completo de cabelo e barba</p>
-          <p class="produto-preco">R$ 70,00</p>
-        </li>
-      </ul>
-    </main>
-  <footer>
-    <!-- <img src="imagens/logo-branco.png" alt="Logo da Barbearia do Luiz em branco"> -->
-        <div class="copyright">
-            <p>Barbearia do Luiz - Todos os direitos reservados</p>
-            <p>Endereço: Rua dos Bobos, nº 0 - Bairro: Jardim dos Tolos - Cidade: São Paulo - SP</p>
-        </div>    
+    </div>
   </footer>
-  </body>
+
+  <button id="voltar-topo" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <script src="script.js"></script>
+</body>
 </html>
